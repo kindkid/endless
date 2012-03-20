@@ -1,0 +1,25 @@
+Endless
+=======
+A tiny webapp for generating an endless stream of data in an HTTP response.
+
+
+Installation
+============
+
+  gem install endless
+
+
+Usage
+=====
+
+  rake server[5678]
+
+  curl -s http://localhost:5678/endless | head -c 100
+
+Caveats
+=======
+
+Pre-alpha software. Useful for testing purposes only.
+
+Currently, I think the server just keeps streaming a response even after the
+client disconnects, until you kill the server. Pull requests welcome!
